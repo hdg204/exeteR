@@ -87,15 +87,3 @@ ex_dark_theme=theme_bw()+
 		axis.line.x=element_line(colour="#FFFFFF"),
 		axis.ticks=element_line(colour="#FFFFFF"))
 
-
-FP=ggplot(forest_df, aes(x = beta, y = exposure)) +
-    geom_vline(xintercept = 0, linetype = "dashed",colour='#FFFFFF') +
-	geom_point(colour=ex_highlight_green,size=2) +
-    geom_errorbarh(aes(xmin = beta - 1.96 * SE, xmax = beta + 1.96 * SE),colour=ex_highlight_green,linewidth=1) +
-    facet_wrap(~ outcome, scales = "free", ncol = 1) +
-    theme_minimal() +
-    xlab("Effect Size (Beta)") +
-    ylab("Outcome") +
-    labs(title = "Phenotypic Associations")+scale_color_manual(values = exeter_full_palette)+scale_fill_manual(values = exeter_full_palette)+ex_green_theme
-	
-ggsave(filename = "faceted_forest_plot.png", plot = FP, width = 6, height = 6, dpi = 300)
