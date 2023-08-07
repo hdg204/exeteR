@@ -1,14 +1,10 @@
-install.packages('tidyverse')
-install.packages('ggplot2')
-install.packages('extrafont')
-install.packages('showtext')
-
 library(extrafont)
 library(tidyverse)
 library(ggplot2)
 library(showtext)
 showtext_auto()
 
+#define exeter colours
 ex_night_green='#022020'
 ex_dark_green='#003c3c'
 ex_deep_green='#007d69'
@@ -33,20 +29,73 @@ ex_light_pink='#f4c3cd'
 ex_stone_grey='#898b8d'
 
 
-
 exeter_full_palette=c(ex_dark_green,ex_deep_green,ex_highlight_green,ex_wood_brown,ex_pure_purple,ex_deep_sea,ex_sun_yellow,ex_low_purple,ex_sunset_pink,ex_morning_sky,ex_hay,ex_rose_red)
-
 exeter_greens=c(ex_dark_green,ex_deep_green,ex_highlight_green) 
 exeter_palette=c(ex_dark_green,ex_deep_green,ex_highlight_green,ex_wood_brown,ex_sun_yellow)
 
 
 font_add_google(name = "Outfit", family = "Outfit")
 
+# also add all of the sub styles with different weighting
+wt <- seq(100, 900, 100)
+purrr::walk(
+  wt,
+  \(x) font_add_google(
+    name = "Outfit",
+    family = paste0("Outfit", x),
+    regular.wt = x
+  )
+)
+
+
 
 
 ex_theme=theme_bw()+
-  theme(text = element_text(family = "Outfit",size = 20),
+  theme(text = element_text(family = "Outfit200",size = 40),
         axis.line = element_line(colour = "black"),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-		plot.title = element_text(hjust = 0.5))
+		strip.background = element_rect(fill = '#FFFFFF'),
+		plot.title = element_text(hjust = 0.5,family="Outfit700"))
+		
+ex_green_theme=theme_bw()+
+  theme(text = element_text(family = "Outfit200",size = 40,colour=ex_dark_green),
+        axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+		strip.background = element_rect(fill = '#FFFFFF'),
+		axis.text.x = element_text(color=ex_dark_green),
+        axis.text.y = element_text(color=ex_dark_green),
+		strip.text = element_text(colour = ex_dark_green,family = "Outfit"),
+		axis.line.x=element_line(colour=ex_dark_green),
+		axis.ticks=element_line(colour=ex_dark_green),
+		panel.background = element_rect(colour=ex_dark_green),
+		plot.title = element_text(hjust = 0.5,family="Outfit700"))
+
+ex_dark_theme=theme_bw()+
+    theme(text = element_text(family = "Outfit200",size = 40,colour='#FFFFFF'),
+        axis.line = element_line(colour = "#FFFFFF"),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = ex_dark_green,colour='#FFFFFF'),
+		plot.background = element_rect(fill = ex_dark_green,colour=ex_dark_green),
+        plot.title = element_text(hjust = 0.5,family="Outfit700",color=ex_highlight_green),
+		axis.text.x = element_text(color="#FFFFFF"),
+        axis.text.y = element_text(color="#FFFFFF"),
+		panel.grid.major = element_line(size = 0.25),
+		panel.border = element_rect(color = "#FFFFFF", fill = NA),
+		strip.background =element_rect(fill=ex_dark_green,color='#FFFFFF'),
+		strip.text = element_text(colour = '#FFFFFF',family = "Outfit"),
+		axis.line.x=element_line(colour="#FFFFFF"),
+		axis.ticks=element_line(colour="#FFFFFF"))
+
+
+FP=ggplot(forest_df, aes(x = beta, y = exposure)) +
+    geom_vline(xintercept = 0, linetype = "dashed",colour='#FFFFFF') +
+	geom_point(colour=ex_highlight_green,size=2) +
+    geom_errorbarh(aes(xmin = beta - 1.96 * SE, xmax = beta + 1.96 * SE),colour=ex_highlight_green,linewidth=1) +
+    facet_wrap(~ outcome, scales = "free", ncol = 1) +
+    theme_minimal() +
+    xlab("Effect Size (Beta)") +
+    ylab("Outcome") +
+    labs(title = "Phenotypic Associations")+scale_color_manual(values = exeter_full_palette)+scale_fill_manual(values = exeter_full_palette)+ex_green_theme
+	
+ggsave(filename = "faceted_forest_plot.png", plot = FP, width = 6, height = 6, dpi = 300)
