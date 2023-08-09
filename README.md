@@ -12,8 +12,8 @@ source_url("https://raw.githubusercontent.com/hdg204/exeteR/main/ex_theme.R")
 ```
 This will make the following items available:
 
-1 - ```ex_theme```, ```ex_green_theme```, and ```ex_dark_theme```, ggplot themes that set colour schemes and fonts for ggplots
-2 - All official Exeter colours from https://brand.exeter.ac.uk/colour/, stored in hex codes in e.g. ```ex_dark_green```
-3 - Three palettes using combinations of the official colours
+1. ```ex_theme```, ```ex_green_theme```, and ```ex_dark_theme```, ggplot themes that set colour schemes and fonts for ggplots
+2. All official Exeter colours from https://brand.exeter.ac.uk/colour/, stored in hex codes in e.g. ```ex_dark_green```
+3. Three palettes using combinations of the official colours: ```exeter_greens```, ```exeter_palette```, and ```exeter_full_palette```.
 
 ## Examples
