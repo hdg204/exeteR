@@ -41,3 +41,4 @@ Code for all of the below examples is available in ex_theme_examples.R.
 ### Faceted Forest Plot on dark theme
 
 <img src="https://github.com/hdg204/exeteR/assets/36624710/4b620c39-15b3-4d73-a81c-6fff2cc9d191)" width="480">
+
