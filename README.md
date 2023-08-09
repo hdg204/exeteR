@@ -22,22 +22,22 @@ Code for all of the below examples is available in ex_theme_examples.R.
 
 ### Scatterplots showing the three themes
 
-![ex_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/9029de19-d108-4b28-8e95-b283fec581b3 | width=100)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/9029de19-d108-4b28-8e95-b283fec581b3" width="480">
 
-![ex_green_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/dd218aa1-093a-40f0-943b-d48c470db11d)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/dd218aa1-093a-40f0-943b-d48c470db11d" width="480">
 
-![ex_dark_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/d5321d44-99cb-4925-8d49-4027bc7305d7)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/d5321d44-99cb-4925-8d49-4027bc7305d7" width="480">
 
 ### Density Plot and Line Plot using the exeter_greens palette
 
-![ex_density](https://github.com/hdg204/exeteR/assets/36624710/2b69cc6f-10e8-4b28-b821-866e9d43964f)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/2b69cc6f-10e8-4b28-b821-866e9d43964f" width="480">
 
-![line_plot_pronounced_differences](https://github.com/hdg204/exeteR/assets/36624710/9efb92f5-4d81-4d6c-9d74-7ed70ac5e54c)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/9efb92f5-4d81-4d6c-9d74-7ed70ac5e54c" width="480">
 
 ### Bar graph with month on x axis
 
-![ex_bars](https://github.com/hdg204/exeteR/assets/36624710/88679f5b-42a7-4213-a35c-06613b773ceb)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/88679f5b-42a7-4213-a35c-06613b773ceb)" width="480">
 
 ### Faceted Forest Plot on dark theme
 
-![faceted_forest_plot](https://github.com/hdg204/exeteR/assets/36624710/4b620c39-15b3-4d73-a81c-6fff2cc9d191)
+<img src="https://github.com/hdg204/exeteR/assets/36624710/4b620c39-15b3-4d73-a81c-6fff2cc9d191)" width="480">
