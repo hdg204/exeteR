@@ -30,7 +30,7 @@ Code for all of the below examples is available in ex_theme_examples.R.
 
 ### Density Plot and Line Plot using the exeter_greens palette
 
-<img src="https://github.com/hdg204/exeteR/assets/36624710/2b69cc6f-10e8-4b28-b821-866e9d43964f" width="480">
+<img src="https://github.com/hdg204/exeteR/assets/36624710/66a99c9b-c2cd-4334-8e1f-c958a5607657" width="480">
 
 <img src="https://github.com/hdg204/exeteR/assets/36624710/9efb92f5-4d81-4d6c-9d74-7ed70ac5e54c" width="480">
 
