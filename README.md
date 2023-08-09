@@ -22,7 +22,7 @@ Code for all of the below examples is available in ex_theme_examples.R.
 
 ### Scatterplots showing the three themes
 
-![ex_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/9029de19-d108-4b28-8e95-b283fec581b3)
+![ex_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/9029de19-d108-4b28-8e95-b283fec581b3 | width=100)
 
 ![ex_green_theme_scatterplot](https://github.com/hdg204/exeteR/assets/36624710/dd218aa1-093a-40f0-943b-d48c470db11d)
 
