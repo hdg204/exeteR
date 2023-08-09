@@ -47,6 +47,9 @@ purrr::walk(
   )
 )
 
+
+
+
 ex_theme=theme_bw()+
   theme(text = element_text(family = "Outfit200",size = 40),
         axis.line = element_line(colour = "black"),
@@ -56,18 +59,17 @@ ex_theme=theme_bw()+
 		plot.title = element_text(hjust = 0.5,family="Outfit700"))
 		
 ex_green_theme=theme_bw()+
-  theme(text = element_text(family = "Outfit200",size = 40,colour=ex_dark_green),
+  theme(text = element_text(family = "Outfit200",size = 40,colour=ex_deep_green),
         axis.line = element_line(colour = "black"),
         panel.grid.minor = element_blank(),
 		strip.background = element_rect(fill = '#FFFFFF'),
-		axis.text.x = element_text(color=ex_dark_green),
-        axis.text.y = element_text(color=ex_dark_green),
-		strip.text = element_text(colour = ex_dark_green,family = "Outfit"),
+		axis.text.x = element_text(color=ex_deep_green),
+        axis.text.y = element_text(color=ex_deep_green),
+		strip.text = element_text(colour = ex_deep_green,family = "Outfit"),
 		axis.line.x=element_line(colour=ex_dark_green),
+		axis.line.y=element_line(colour=ex_dark_green),
 		axis.ticks=element_line(colour=ex_dark_green),
 		panel.background = element_rect(colour=ex_dark_green),
-		axis.line.x=element_line(colour=ex_dark_green),
-		axis.ticks=element_line(colour=ex_dark_green),
 		plot.title = element_text(hjust = 0.5,family="Outfit700"))
 
 ex_dark_theme=theme_bw()+
@@ -84,4 +86,5 @@ ex_dark_theme=theme_bw()+
 		strip.background =element_rect(fill=ex_dark_green,color='#FFFFFF'),
 		strip.text = element_text(colour = '#FFFFFF',family = "Outfit"),
 		axis.line.x=element_line(colour="#FFFFFF"),
+		axis.line.y=element_line(colour="#FFFFFF"),
 		axis.ticks=element_line(colour="#FFFFFF"))
