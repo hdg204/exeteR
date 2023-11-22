@@ -1,5 +1,5 @@
 library(extrafont)
-library(tidyverse)
+library(dplyr)
 library(ggplot2)
 library(showtext)
 showtext_auto()
